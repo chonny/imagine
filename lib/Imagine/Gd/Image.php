@@ -25,7 +25,7 @@ use Imagine\Exception\RuntimeException;
 /**
  * Image implementation using the GD library
  */
-final class Image implements ImageInterface
+ class Image implements ImageInterface
 {
     /**
      * @var resource
@@ -67,7 +67,7 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
-    final public function copy()
+     public function copy()
     {
         $size = $this->getSize();
 
@@ -84,7 +84,7 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
-    final public function crop(PointInterface $start, BoxInterface $size)
+     public function crop(PointInterface $start, BoxInterface $size)
     {
         if (!$start->in($this->getSize())) {
             throw new OutOfBoundsException(
@@ -114,7 +114,7 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
-    final public function paste(ImageInterface $image, PointInterface $start)
+     public function paste(ImageInterface $image, PointInterface $start)
     {
         if (!$image instanceof self) {
             throw new InvalidArgumentException(sprintf(
@@ -148,7 +148,7 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
-    final public function resize(BoxInterface $size)
+     public function resize(BoxInterface $size)
     {
         $width  = $size->getWidth();
         $height = $size->getHeight();
@@ -177,7 +177,7 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
-    final public function rotate($angle, Color $background = null)
+     public function rotate($angle, Color $background = null)
     {
         $color = $background ? $background : new Color('fff');
 
@@ -197,7 +197,7 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
-    final public function save($path, array $options = array())
+     public function save($path, array $options = array())
     {
         $format = isset($options['format'])
             ? $options['format']
@@ -242,7 +242,7 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
-    final public function flipHorizontally()
+     public function flipHorizontally()
     {
         $size   = $this->getSize();
         $width  = $size->getWidth();
@@ -266,7 +266,7 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
-    final public function flipVertically()
+     public function flipVertically()
     {
         $size   = $this->getSize();
         $width  = $size->getWidth();
@@ -290,7 +290,7 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
-    final public function strip()
+     public function strip()
     {
         /**
          * GD strips profiles and comment, so there's nothing to do here
