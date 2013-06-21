@@ -6,3 +6,5 @@ imagine-*.phar
 composer.phar
 vendor/
 bin/
+/nbproject/private/
+nbproject
