@@ -27,7 +27,7 @@ use Imagine\Image\ImageInterface;
 /**
  * Image implementation using the Imagick PHP extension
  */
-final class Image implements ImageInterface
+ class Image implements ImageInterface
 {
     /**
      * @var \Imagick

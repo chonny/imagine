@@ -23,7 +23,7 @@ use Imagine\Image\PointInterface;
 /**
  * Drawer implementation using the Gmagick PHP extension
  */
-final class Drawer implements DrawerInterface
+class Drawer implements DrawerInterface
 {
     /**
      * @var \Gmagick

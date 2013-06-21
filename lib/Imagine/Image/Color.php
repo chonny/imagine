@@ -16,7 +16,7 @@ use Imagine\Exception\InvalidArgumentException;
 /**
  * The color class
  */
-final class Color
+ class Color
 {
     /**
      * @var integer

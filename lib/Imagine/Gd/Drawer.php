@@ -22,7 +22,7 @@ use Imagine\Image\PointInterface;
 /**
  * Drawer implementation using the GD library
  */
-final class Drawer implements DrawerInterface
+class Drawer implements DrawerInterface
 {
     /**
      * @var resource
