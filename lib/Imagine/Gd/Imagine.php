@@ -20,7 +20,7 @@ use Imagine\Exception\RuntimeException;
 /**
  * Imagine implementation using the GD library
  */
-final class Imagine implements ImagineInterface
+ class Imagine implements ImagineInterface
 {
     /**
      * @var array
